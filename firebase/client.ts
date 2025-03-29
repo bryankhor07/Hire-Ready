@@ -3,12 +3,10 @@ import { initializeApp, getApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-const FIREBASE_CLIENT_API_KEY = process.env.FIREBASE_CLIENT_API_KEY;
-
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: FIREBASE_CLIENT_API_KEY,
+  apiKey: "AIzaSyBI2HwB8JrK9axAWWfnyhnoYUzWCQG5Ecg",
   authDomain: "hire-ready.firebaseapp.com",
   projectId: "hire-ready",
   storageBucket: "hire-ready.firebasestorage.app",
