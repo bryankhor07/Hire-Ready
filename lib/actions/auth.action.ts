@@ -29,9 +29,7 @@ export async function signUp(params: SignUpParams) {
       message: "Account created successfully. Please sign in.",
     };
   } catch (error: any) {
-    console.error("Error signing up:", error);
-
-    if (error.code === "auth/email-already-exists") {
+    if (error.code === "auth/email-already-in-use") {
       return {
         success: false,
         message: "Email already exists.",
@@ -77,8 +75,6 @@ export async function signIn(params: SignInParams) {
 
     await setSessionCookie(idToken);
   } catch (error: any) {
-    console.log("");
-
     return {
       success: false,
       message: "Failed to log into account. Please try again.",
